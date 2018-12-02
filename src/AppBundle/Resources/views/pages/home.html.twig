@@ -1,0 +1,75 @@
+{% extends'@App/base/base.html.twig' %}
+
+
+
+{% block body %}
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="column admin">
+            <a href="{{ path('Admin_Users_list') }}">
+                <p>Utilisateus</p>
+            </a>
+        </div>
+        <div class="column">
+            <p>Reservations</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column">
+            <p>Menu</p>
+        </div>
+        <div class="column">
+            <p>Plats</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column">
+            <p>Boissons</p>
+        </div>
+        <div class="column">
+            <p>Desserts</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

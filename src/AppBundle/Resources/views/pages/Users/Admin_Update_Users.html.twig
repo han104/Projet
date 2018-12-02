@@ -1,0 +1,41 @@
+{% extends '@App/base/base.html.twig' %}
+
+{% block body %}
+
+    <div class="row d-flex justify-content-center align-items-end mt-5">
+        {{ form_start(form) }}
+
+        <div class="col-6 offset-2">
+            {{ form_errors(form.last_name) }}
+            {{ form_label(form.last_name) }}
+            {{ form_widget(form.last_name, {'attr': {'class': 'nom'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.first_name) }}
+            {{ form_widget(form.first_name, {'attr': {'class': 'date_Naissance'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email, {'attr': {'class': 'date_Mort'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.phone_number) }}
+            {{ form_widget(form.phone_number, {'attr': {'class': 'Biography'}}) }}
+        </div>
+        <hr>
+        <div class="col-6 offset-2">
+            {{ form_label(form.Save) }}
+            {{ form_widget(form.Save, {'attr': {'class': 'Biography'}}) }}
+        </div>
+
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
