@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Exo_symfony_SQL/.idea/Exo_symfony_SQL.iml" filepath="$PROJECT_DIR$/../Exo_symfony_SQL/.idea/Exo_symfony_SQL.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Projet_Hans_Piscine.iml" filepath="$PROJECT_DIR$/.idea/Projet_Hans_Piscine.iml" />
     </modules>
   </component>

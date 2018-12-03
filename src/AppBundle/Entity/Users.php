@@ -136,6 +136,23 @@ class Users
         $this->Reservations = $Reservations;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getReservationsJoin()
+    {
+        return $this->reservations_join;
+    }
+
+    /**
+     * @param mixed $reservations_join
+     */
+    public function setReservationsJoin($reservations_join)
+    {
+        $this->reservations_join = $reservations_join;
+    }
+
+
 
 
 

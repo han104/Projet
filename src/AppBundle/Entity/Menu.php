@@ -96,6 +96,22 @@ class Menu
         $this->menu_price = $menu_price;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getReservationJoin()
+    {
+        return $this->reservation_join;
+    }
+
+    /**
+     * @param mixed $reservation_join
+     */
+    public function setReservationJoin($reservation_join)
+    {
+        $this->reservation_join = $reservation_join;
+    }
+
 
 
 

@@ -32,7 +32,7 @@ class AdminUsersController extends Controller
             $entityManager->persist($user);
             $entityManager->flush();
             // On reaffiche la meme page si notre formulaire respecte les asserts.
-            return $this->redirectToRoute('admin_Users_create');
+            return $this->redirectToRoute('Admin_Users_list');
         }
         //Notre controlleur retourne cette page.
         return $this->render('@App/pages/Users/Admin_Create_Users.html.twig',

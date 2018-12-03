@@ -17,7 +17,7 @@ class ReservationsType extends AbstractType
         $builder
             ->add('reservation_date_time')
             ->add('Users')
-            ->add('menu')
+            ->add('Menu')
             ->add('Save', SubmitType::class);
 
     }/**

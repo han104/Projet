@@ -22,7 +22,7 @@ class Reservations
     private $id;
 
     /**
-     * @ORM\Column(type="date", name="reservation")
+     * @ORM\Column(type="datetime", name="reservation")
      */
     private $reservation_date_time;
 
@@ -102,8 +102,57 @@ class Reservations
         $this->menu = $menu;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUsersJoin()
+    {
+        return $this->Users_join;
+    }
+
+    /**
+     * @param mixed $Users_join
+     */
+    public function setUsersJoin($Users_join)
+    {
+        $this->Users_join = $Users_join;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMenuJoin()
+    {
+        return $this->Menu_join;
+    }
+
+    /**
+     * @param mixed $Menu_join
+     */
+    public function setMenuJoin($Menu_join)
+    {
+        $this->Menu_join = $Menu_join;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlatesJoin()
+    {
+        return $this->Plates_join;
+    }
+
+    /**
+     * @param mixed $Plates_join
+     */
+    public function setPlatesJoin($Plates_join)
+    {
+        $this->Plates_join = $Plates_join;
+    }
 
 
+
+/**/
 
 
 

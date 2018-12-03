@@ -46,5 +46,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Exo_symfony_SQL" />
   </component>
 </module>
