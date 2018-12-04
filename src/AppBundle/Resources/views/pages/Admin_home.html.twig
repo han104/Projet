@@ -3,18 +3,18 @@
 
 
 {% block body %}
-
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 <div class="container">
 
     <div class="row">
 
-        <div class="column admin">
+        <div class="column">
             <a href="{{ path('Admin_Users_list') }}">
                 <p>Utilisateus</p>
             </a>
         </div>
-        <div class="column">
+        <div class="column offset-1">
             <a href="{{ path('Admin_Reservations_list') }}">
             <p>Reservations</p>
             </a>
@@ -27,7 +27,7 @@
         <div class="column">
             <p>Menu</p>
         </div>
-        <div class="column">
+        <div class="column offset-1">
             <p>Plats</p>
         </div>
 
@@ -38,7 +38,7 @@
         <div class="column">
             <p>Boissons</p>
         </div>
-        <div class="column">
+        <div class="column offset-1">
             <p>Desserts</p>
         </div>
 

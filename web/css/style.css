@@ -1,0 +1,75 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url("../image/fond.jpg") no-repeat ;
+    background-size: cover;
+}
+
+.container
+{
+    margin: 130px 300px;
+    display: table;
+    box-sizing: border-box;
+
+}
+
+.row
+{
+
+    margin: 10px 0;
+    height: 180px;
+}
+
+.column
+{
+
+    background-color: black;
+    display: table-cell;
+    width: 33%;
+    text-align: center;
+    padding: 65px;
+    color: white;
+
+}
+
+
+/*On cible la premiere ROW et la premire COLUMN*/
+.row:nth-child(1) .column:nth-child(1)
+{
+    background-color: darkslategrey;
+
+}
+
+/*On cible la premiere ROW et la deuxieme COLUMN*/
+.row:nth-child(1) .column:nth-child(2)
+{
+    background-color: palevioletred;
+}
+
+
+/*On cible la deuxieme ROW et la premiere COLUMN*/
+.row:nth-child(2) .column:nth-child(1)
+{
+    background-color: cornflowerblue;
+}
+
+/*On cible la deuxieme ROW et la deuxieme COLUMN*/
+.row:nth-child(2) .column:nth-child(2)
+{
+    background-color: deepskyblue;
+}
+
+
+/*On cible la troisieme ROW et la premiere COLUMN*/
+.row:nth-child(3) .column:nth-child(1)
+{
+    background-color: firebrick;
+}
+
+/*On cible la troisieme ROW et la deuxieme COLUMN*/
+.row:nth-child(3) .column:nth-child(2)
+{
+    background-color: darkslategray;
+}

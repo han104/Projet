@@ -14,28 +14,28 @@
 
 
 
-{% for reservation in Reservations %}
+{% for reservation in reservations %}
 
     <div class="row">
         <div class="col-2">
             <p>{{ reservation.ReservationDateTime|date('Y-m-d\\TH:i:sP') }}</p>
         </div>
-        <div class="col-2">
-            <p>{{ reservation.Users }}</p>
-        </div>
-        <div class="col-3">
-            <p>{{ reservation.Menu }}</p>
-        </div>
-        <div class="col-2">
-            <p>{{ reservation.Save}}</p>
-        </div>
+        {#<div class="col-2">#}
+            {#<p>{{ reservation.Users }}</p>#}
+        {#</div>#}
+        {#<div class="col-3">#}
+            {#<p>{{ reservation.Menu}}</p>#}
+        {#</div>#}
+        {#<div class="col-2">#}
+            {#<p>{{ reservation.Save}}</p>#}
+        {#</div>#}
         <div class="col-1">
-            <a href="{{ path('admin_Reservations_update', {'id' :user.id}) }}">
+            <a href="{{ path('admin_Reservations_update', {'id' :reservation.id}) }}">
                 <button type="button" class="btn btn-outline-warning">Modifier</button>
             </a>
         </div>
         <div class="col-1">
-            <a href="{{ path('admin_Reservations_delete', {'id' :user.id}) }}">
+            <a href="{{ path('admin_Reservations_delete', {'id' :reservation.id}) }}">
                 <button type="button" class="btn btn-outline-danger">Supprimer</button>
             </a>
         </div>

@@ -14,14 +14,14 @@
     <hr>
 
     <div class="col-6 offset-2">
-        {{ form_label(form.Users) }}
-        {{ form_widget(form.Users, {'attr': {'class': 'Users'}}) }}
+        {{ form_label(form.Users_join) }}
+        {{ form_widget(form.Users_join, {'attr': {'class': 'Users'}}) }}
     </div>
     <hr>
 
     <div class="col-6 offset-2">
-        {{ form_label(form.menu) }}
-        {{ form_widget(form.menu, {'attr': {'class': 'menu'}}) }}
+        {{ form_label(form.Menu_join) }}
+        {{ form_widget(form.Menu_join, {'attr': {'class': 'menu'}}) }}
     </div>
     <hr>
 
@@ -34,3 +34,5 @@
 
     {{ form_end(form) }}
 </div>
+
+{% endblock %}

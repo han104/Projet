@@ -1,0 +1,48 @@
+.FondHeader
+{
+    background: url("../image/plat2.jpg") no-repeat ;
+    background-size: cover;
+    height: 98vh;
+}
+
+.FondBody1
+{
+    background: url("../image/fond4.jpg") no-repeat ;
+    background-size: cover;
+    height: 80vh;
+}
+
+.font {
+    color: white;
+    font-size: 22px;
+}
+
+
+.border
+{
+    border-radius: 32px 32px 32px 32px;
+    -moz-border-radius: 32px 32px 32px 32px;
+    -webkit-border-radius: 32px 32px 32px 32px;
+    border: 4px solid #000000;
+}
+
+.column {
+
+    background-color: white;
+    display: table-cell;
+    width: 33%;
+    text-align: center;
+    padding: 65px;
+    color: black;
+}
+
+.loginbox
+{
+    width: 320px;
+    height: 420px;
+    background-color: darkslategray;
+    color: white;
+    top: 50%;
+    left: 50%;
+
+}

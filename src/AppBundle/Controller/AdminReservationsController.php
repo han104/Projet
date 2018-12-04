@@ -67,12 +67,12 @@ class AdminReservationsController extends Controller
 
         $repository = $this->getDoctrine()->getRepository(Reservations::class);
 
-        $Reservations = $repository->findAll();
+        $reservations = $repository->findAll();
 
         return $this->render('@App/pages/Reservations/Admin_Read_Reservations.html.twig',
 
             [
-                'Reservations' => $Reservations
+                'reservations' => $reservations
             ]
 
         );

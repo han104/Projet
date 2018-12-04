@@ -29,12 +29,12 @@ class Reservations
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Users", inversedBy="reservations_join")
      */
-    private $Users_join;
+    private $Users_Join;
 
     /**
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Menu", mappedBy="reservation_join")
      */
-    private $Menu_join;
+    private $Menu_Join;
 
     /**
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Plates", mappedBy="reservations_join")
@@ -73,49 +73,17 @@ class Reservations
     /**
      * @return mixed
      */
-    public function getUsers()
-    {
-        return $this->Users;
-    }
-
-    /**
-     * @param mixed $Users
-     */
-    public function setUsers($Users)
-    {
-        $this->Users = $Users;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMenu()
-    {
-        return $this->menu;
-    }
-
-    /**
-     * @param mixed $menu
-     */
-    public function setMenu($menu)
-    {
-        $this->menu = $menu;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getUsersJoin()
     {
-        return $this->Users_join;
+        return $this->Users_Join;
     }
 
     /**
-     * @param mixed $Users_join
+     * @param mixed $Users_Join
      */
-    public function setUsersJoin($Users_join)
+    public function setUsersJoin($Users_Join)
     {
-        $this->Users_join = $Users_join;
+        $this->Users_Join = $Users_Join;
     }
 
     /**
@@ -123,15 +91,15 @@ class Reservations
      */
     public function getMenuJoin()
     {
-        return $this->Menu_join;
+        return $this->Menu_Join;
     }
 
     /**
-     * @param mixed $Menu_join
+     * @param mixed $Menu_Join
      */
-    public function setMenuJoin($Menu_join)
+    public function setMenuJoin($Menu_Join)
     {
-        $this->Menu_join = $Menu_join;
+        $this->Menu_Join = $Menu_Join;
     }
 
     /**
@@ -149,6 +117,7 @@ class Reservations
     {
         $this->Plates_join = $Plates_join;
     }
+
 
 
 
