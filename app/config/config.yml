@@ -11,6 +11,8 @@ parameters:
 framework:
     #esi: ~
     #translator: { fallbacks: ['%locale%'] }
+    templating:
+        engines: ['twig'] # templating:engines est une ligne a ajouter manuellement
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -35,6 +37,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+    - 'bootstrap_3_layout.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -69,3 +73,16 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    from_email:
+        address: "test@mail.com"
+        sender_name: "test@mail.com"
+    registration:
+        form:
+            type: AppBundle\Form\RegistrationType
+    profile:
+        form:
+            type: AppBundle\Form\ProfileType

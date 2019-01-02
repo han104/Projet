@@ -15,12 +15,13 @@ class ReservationsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('reservation_date_time')
-            ->add('Users_join')
-            ->add('Menu_join')
+            ->add('reservation_date')
+            ->add('reservation_time')
+            ->add('user') //  User from the OneToMany relation
             ->add('Save', SubmitType::class);
 
-    }/**
+    }
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

@@ -1,0 +1,31 @@
+{% extends '@App/base/BaseAdmin.html.twig' %}
+
+{% block body %}
+
+
+    <div class="row ">
+        {{ form_start(form) }}
+
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.menuLibelle) }}
+            {{ form_widget(form.menuLibelle, {'attr': {'class': 'menuLibelle'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.menuPrix) }}
+            {{ form_widget(form.menuPrix, {'attr': {'class': 'menuPrix'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.Save) }}
+            {{ form_widget(form.Save, {'attr': {'class': 'Biography'}}) }}
+        </div>
+
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

@@ -3,7 +3,7 @@ body
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: url("../image/fond.jpg") no-repeat ;
+    /*background: url("../image/fond.jpg") no-repeat ;*/
     background-size: cover;
 }
 
@@ -12,26 +12,22 @@ body
     margin: 130px 300px;
     display: table;
     box-sizing: border-box;
-
 }
 
 .row
 {
-
     margin: 10px 0;
     height: 180px;
 }
 
 .column
 {
-
     background-color: black;
     display: table-cell;
     width: 33%;
     text-align: center;
     padding: 65px;
     color: white;
-
 }
 
 
@@ -39,7 +35,6 @@ body
 .row:nth-child(1) .column:nth-child(1)
 {
     background-color: darkslategrey;
-
 }
 
 /*On cible la premiere ROW et la deuxieme COLUMN*/
@@ -73,3 +68,6 @@ body
 {
     background-color: darkslategray;
 }
+
+/*CSS login_content.html.twig*/
+

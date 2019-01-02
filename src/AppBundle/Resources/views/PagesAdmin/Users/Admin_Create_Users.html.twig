@@ -1,0 +1,48 @@
+{% extends '@App/base/BaseAdmin.html.twig' %}
+
+{% block body %}
+
+
+    <div class="row ">
+        {{ form_start(form) }}
+
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.FirstName) }}
+            {{ form_widget(form.FirstName, {'attr': {'class': 'first_name'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.LastName) }}
+            {{ form_widget(form.LastName, {'attr': {'class': 'LastName'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email, {'attr': {'class': 'date_Mort'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.Password) }}
+            {{ form_widget(form.Password, {'attr': {'class': 'Password'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.Telephone) }}
+            {{ form_widget(form.Telephone, {'attr': {'class': 'Biography'}}) }}
+        </div>
+        <hr>
+        <div class="col-6 offset-2">
+            {{ form_label(form.Save) }}
+            {{ form_widget(form.Save, {'attr': {'class': 'Biography'}}) }}
+        </div>
+
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

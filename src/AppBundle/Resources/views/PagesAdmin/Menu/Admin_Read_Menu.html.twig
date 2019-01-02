@@ -1,0 +1,43 @@
+{% extends '@App/base/BaseAdmin.html.twig' %}
+
+
+{% block body %}
+
+    {# faire un sticyk menu avec nom, prenom, mail et tel#}
+    <div class="row">
+        <div class="col-4">Menu Libéllé</div>
+        <div class="col-4 offset-1">Menu Prix</div>
+        <a href="{{ path('admin_Menu_create') }}">
+            <div class="col-2 offset-1">Ajouter Menu</div>
+        </a>
+    </div>
+    <hr>
+
+
+
+    {% for menu in Menu %}
+
+        <div class="row">
+            <div class="col-4">
+                <p>{{ menu.menuLibelle}}</p>
+            </div>
+            <div class="col-4 offset-1">
+                <p>{{ menu.menuPrix }}</p>
+            </div>
+
+            <div class="col-1">
+                <a href="{{ path('admin_Menu_update', {'id' :menu.id}) }}">
+                    <button type="button" class="btn btn-outline-warning">Modifier</button>
+                </a>
+            </div>
+            <div class="col-1">
+                <a href="{{ path('admin_Menu_delete', {'id' :menu.id}) }}">
+                    <button type="button" class="btn btn-outline-danger">Supprimer</button>
+                </a>
+            </div>
+        </div>
+        <br>
+
+    {% endfor %}
+
+{% endblock %}

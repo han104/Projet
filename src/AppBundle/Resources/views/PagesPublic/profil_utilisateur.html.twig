@@ -1,0 +1,10 @@
+{% extends '@App/base/BasePublic.html.twig' %}
+
+
+{% block body %}
+
+    <p>Bienvenue {{ app.user.username }}</p>
+    <hr>
+    <p><a href="{{ path('home') }}">Deconnexion</a></p>
+
+{% endblock %}

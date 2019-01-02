@@ -15,9 +15,8 @@ class MenuType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('menu_name')
-            ->add('menu_price')
-            ->add('Reservations')
+            ->add('menuLibelle')
+            ->add('menuPrix')
             ->add('Save', SubmitType::class);
     }/**
      * {@inheritdoc}

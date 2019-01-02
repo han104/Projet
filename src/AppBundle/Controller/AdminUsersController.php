@@ -2,8 +2,9 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Users;
-use AppBundle\Form\UsersType;
+
+use AppBundle\Entity\User;
+use AppBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,7 +21,7 @@ class AdminUsersController extends Controller
 
     public function AddUsersAction(Request $request) {
         // Creation d'un formulaire d'ajout pour notre entité Users.
-        $form = $this->createForm(UsersType::class, new Users());
+        $form = $this->createForm(UserType::class, new User());
 
         $form->handleRequest($request);
         // Verirication du formulaire
@@ -35,7 +36,7 @@ class AdminUsersController extends Controller
             return $this->redirectToRoute('Admin_Users_list');
         }
         //Notre controlleur retourne cette page.
-        return $this->render('@App/pages/Users/Admin_Create_Users.html.twig',
+        return $this->render('@App/PagesAdmin/Users/Admin_Create_Users.html.twig',
 
             [
 
@@ -56,11 +57,11 @@ class AdminUsersController extends Controller
      */
     public function ReadUsersAction() {
 
-      $repository = $this->getDoctrine()->getRepository(Users::class);
+      $repository = $this->getDoctrine()->getRepository(User::class);
 
       $Users = $repository->findAll();
 
-      return $this->render('@App/pages/Users/Admin_Read_Users.html.twig',
+      return $this->render('@App/PagesAdmin/Users/Admin_Read_Users.html.twig',
 
           [
               'Users' => $Users
@@ -82,10 +83,10 @@ class AdminUsersController extends Controller
      */
     public function UpdateUsersAction(Request $request, $id){
 
-        $user = $this->getDoctrine()->getRepository(Users::class)->find($id);
+        $user = $this->getDoctrine()->getRepository(User::class)->find($id);
 
 
-        $form = $this->createForm(UsersType::class, $user);
+        $form = $this->createForm(UserType::class, $user);
 
 
         $form->handleRequest($request);
@@ -101,7 +102,7 @@ class AdminUsersController extends Controller
             return $this->redirectToRoute('Admin_Users_list');
         }
 
-        return $this->render('@App/pages/Users/Admin_Update_Users.html.twig',
+        return $this->render('@App/PagesAdmin/Users/Admin_Update_Users.html.twig',
 
             [
 // create view contient ts nos formulaires
@@ -125,7 +126,7 @@ class AdminUsersController extends Controller
      */
     public function DeleteUsersActions($id){
 
-        $repository = $this->getDoctrine()->getRepository(Users::class);
+        $repository = $this->getDoctrine()->getRepository(User::class);
         $entityManager = $this->getDoctrine()->getManager();
 
         $user = $repository->find($id);
@@ -138,6 +139,8 @@ class AdminUsersController extends Controller
     }
 
 }
+
+
 
 
 

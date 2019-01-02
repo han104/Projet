@@ -42,7 +42,7 @@ class AdminMenuController extends Controller
             return $this->redirectToRoute('Admin_Menu_list');
         }
         //Notre controlleur retourne cette page.
-        return $this->render('@App/pages/Users/Admin_Create_Menu.html.twig',
+        return $this->render('@App/PagesAdmin/Menu/Admin_Create_Menu.html.twig',
 
             [
 
@@ -67,7 +67,7 @@ class AdminMenuController extends Controller
 
         $Menu = $repository->findAll();
 
-        return $this->render('@App/pages/Users/Admin_Read_Menu.html.twig',
+        return $this->render('@App/PagesAdmin/Menu/Admin_Read_Menu.html.twig',
 
             [
                 'Menu' => $Menu
@@ -108,7 +108,7 @@ class AdminMenuController extends Controller
             return $this->redirectToRoute('Admin_Menu_list');
         }
 
-        return $this->render('@App/pages/Users/Admin_Update_Menu.html.twig',
+        return $this->render('@App/PagesAdmin/Menu/Admin_Update_Menu.html.twig',
 
             [
 // create view contient ts nos formulaires

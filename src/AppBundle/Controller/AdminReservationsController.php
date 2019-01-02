@@ -43,7 +43,7 @@ class AdminReservationsController extends Controller
                 return $this->redirectToRoute('Admin_Reservations_list');
             }
             //Notre controlleur retourne cette page.
-            return $this->render('@App/pages/Reservations/Admin_Create_Reservations.html.twig',
+            return $this->render('@App/PagesAdmin/Reservations/Admin_Create_Reservations.html.twig',
 
                 [
 
@@ -69,7 +69,7 @@ class AdminReservationsController extends Controller
 
         $reservations = $repository->findAll();
 
-        return $this->render('@App/pages/Reservations/Admin_Read_Reservations.html.twig',
+        return $this->render('@App/PagesAdmin/Reservations/Admin_Read_Reservations.html.twig',
 
             [
                 'reservations' => $reservations
@@ -110,7 +110,7 @@ class AdminReservationsController extends Controller
             return $this->redirectToRoute('Admin_Reservations_list');
         }
 
-        return $this->render('@App/pages/Reservations/Admin_Update_Reservations.html.twig',
+        return $this->render('@App/PagesAdmin/Reservations/Admin_Update_Reservations.html.twig',
 
             [
 // create view contient ts nos formulaires

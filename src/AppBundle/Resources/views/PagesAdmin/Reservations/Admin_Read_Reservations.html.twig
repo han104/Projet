@@ -1,0 +1,47 @@
+{% extends '@App/base/BasePublic.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-2">Reservation Date</div>
+    <div class="col-2">Reservation Time</div>
+    <div class="col-2">User</div>
+    {#<div class="col-3">Menu choisi</div>#}
+    <a href="{{ path('admin_Reservations_create') }}">
+        <div class="col-2 offset-1">Ajouter Reservation</div>
+    </a>
+</div>
+<hr>
+
+
+
+{% for reservation in reservations %}
+
+    <div class="row">
+        <div class="col-2">
+            <p>{{ reservation.ReservationDate|date('Y-m-d\\TH:i:sP') }}</p>
+        </div>
+        <div class="col-2">
+            <p>{{ reservation.user }}</p>
+        </div>
+        {#<div class="col-3">#}
+            {#<p>{{ reservation.Menu}}</p>#}
+        {#</div>#}
+
+        <div class="col-1">
+            <a href="{{ path('admin_Reservations_update', {'id' :reservation.id}) }}">
+                <button type="button" class="btn btn-outline-warning">Modifier</button>
+            </a>
+        </div>
+        <div class="col-1">
+            <a href="{{ path('admin_Reservations_delete', {'id' :reservation.id}) }}">
+                <button type="button" class="btn btn-outline-danger">Supprimer</button>
+            </a>
+        </div>
+    </div>
+    <br>
+
+
+{% endfor %}
+
+{% endblock %}

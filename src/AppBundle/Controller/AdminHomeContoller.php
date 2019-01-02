@@ -21,7 +21,7 @@ class AdminHomeContoller extends Controller
     public function AdminHomeActions() {
 
 
-        return $this->render('@App/pages/Admin_home.html.twig');
+        return $this->render('@App/PagesAdmin/Admin_home.html.twig');
     }
 
 }

@@ -1,0 +1,44 @@
+{% extends '@App/base/BasePublic.html.twig' %}
+
+
+{% block body %}
+
+    <div class="row d-flex justify-content-center align-items-end mt-5">
+        {{ form_start(form) }}
+
+        <div class="col-6 offset-2">
+            {{ form_errors(form.reservation_date) }}
+            {{ form_label(form.reservation_date) }}
+            {{ form_widget(form.reservation_date, {'attr': {'class': 'reservation_date'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_errors(form.reservation_time) }}
+            {{ form_label(form.reservation_time) }}
+            {{ form_widget(form.reservation_time, {'attr': {'class': 'reservation_time'}}) }}
+        </div>
+        <hr>
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.user) }}
+            {{ form_widget(form.user, {'attr': {'class': 'User'}}) }}
+        </div>
+        <hr>
+
+        {#<div class="col-6 offset-2">#}
+            {#{{ form_label(form.user_non_membre) }}#}
+            {#{{ form_widget(form.user_non_membre, {'attr': {'class': 'user_non_membre'}}) }}#}
+        {#</div>#}
+        {#<hr>#}
+
+        <div class="col-6 offset-2">
+            {{ form_label(form.Save) }}
+            {{ form_widget(form.Save, {'attr': {'class': 'save'}}) }}
+        </div>
+
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

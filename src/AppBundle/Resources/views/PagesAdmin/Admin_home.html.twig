@@ -1,0 +1,79 @@
+{% extends'@App/base/BaseAdmin.html.twig' %}
+
+
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="column">
+            <a href="{{ path('Admin_Users_list') }}">
+                <p>Utilisateus</p>
+            </a>
+        </div>
+        <div class="column offset-1">
+            <a href="{{ path('Admin_Reservations_list') }}">
+            <p>Reservations</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column">
+            <a href="{{ path('admin_Menu_create') }}">
+                <p>Menu</p>
+            </a>
+        </div>
+        <div class="column offset-1">
+            <p>Plats</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column">
+            <p>Boissons</p>
+        </div>
+        <div class="column offset-1">
+            <p>Desserts</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

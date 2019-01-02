@@ -22,20 +22,23 @@ class Menu
     private $id;
 
     /**
-     * @ORM\Column(type="string", name="menu_name")
+     * @var string
+     *
+     * @ORM\Column(name="menu_libelle", type="string", length=255)
      */
-    private $menu_name;
+    private $menuLibelle;
 
     /**
-     * @ORM\Column(type="integer", name="menu_price")
+     * @var int
+     *
+     * @ORM\Column(name="menu_prix", type="integer")
      */
-    private $menu_price;
-
+    private $menuPrix;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Reservations", inversedBy="Menu_join")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Reservations", cascade={"persist"})
      */
-    private $reservation_join;
+    private $reservation;
 
 
     /**
@@ -49,70 +52,68 @@ class Menu
     }
 
     /**
+     * Set menuLibelle
+     *
+     * @param string $menuLibelle
+     *
+     * @return Menu
+     */
+    public function setMenuLibelle($menuLibelle)
+    {
+        $this->menuLibelle = $menuLibelle;
+
+        return $this;
+    }
+
+    /**
+     * Get menuLibelle
+     *
+     * @return string
+     */
+    public function getMenuLibelle()
+    {
+        return $this->menuLibelle;
+    }
+
+    /**
+     * Set menuPrix
+     *
+     * @param integer $menuPrix
+     *
+     * @return Menu
+     */
+    public function setMenuPrix($menuPrix)
+    {
+        $this->menuPrix = $menuPrix;
+
+        return $this;
+    }
+
+    /**
+     * Get menuPrix
+     *
+     * @return int
+     */
+    public function getMenuPrix()
+    {
+        return $this->menuPrix;
+    }
+
+    /**
      * @return mixed
      */
-    public function getMenuName()
+    public function getReservation()
     {
-        return $this->menu_name;
+        return $this->reservation;
     }
 
     /**
-     * @param mixed $menu_name
+     * @param mixed $reservation
      */
-    public function setMenuName($menu_name)
+    public function setReservation($reservation)
     {
-        $this->menu_name = $menu_name;
+        $this->reservation = $reservation;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getReservations()
-    {
-        return $this->Reservations;
-    }
-
-    /**
-     * @param mixed $Reservations
-     */
-    public function setReservations($Reservations)
-    {
-        $this->Reservations = $Reservations;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMenuPrice()
-    {
-        return $this->menu_price;
-    }
-
-    /**
-     * @param mixed $menu_price
-     */
-    public function setMenuPrice($menu_price)
-    {
-        $this->menu_price = $menu_price;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getReservationJoin()
-    {
-        return $this->reservation_join;
-    }
-
-    /**
-     * @param mixed $reservation_join
-     */
-    public function setReservationJoin($reservation_join)
-    {
-        $this->reservation_join = $reservation_join;
-    }
-
-
 
 
 }

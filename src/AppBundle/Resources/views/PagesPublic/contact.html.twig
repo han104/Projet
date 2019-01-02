@@ -1,0 +1,45 @@
+{% extends '@App/base/BasePublic.html.twig' %}
+
+
+{% block body %}
+
+
+
+    <div >
+        {%  for flashes in app.session.flashbag.all %}
+            {% for flash in flashes %}
+                <div class="alert alert-success">
+                    <a class="close" data-dismiss="alert">×</a>
+                    <p style="font-size: large"><i class="glyphicon glyphicon-ok"></i> {{ flash }}</p>
+                </div>
+
+            {% endfor %}
+        {% endfor %}
+
+    </div>
+
+{{ form_start(form) }}
+
+<div>
+    {{ form_widget(form.nom) }}
+    {{ form_errors(form.nom) }}
+</div>
+<div>
+    {{ form_widget(form.email) }}
+    {{ form_errors(form.email) }}
+</div>
+<div>
+    {{ form_widget(form.sujet) }}
+    {{ form_errors(form.sujet) }}
+</div>
+<div>
+    {{ form_widget(form.message) }}
+    {{ form_errors(form.message) }}
+</div>
+
+
+<input type="submit" value="Envoyer">
+
+{{ form_end(form) }}
+
+{% endblock %}

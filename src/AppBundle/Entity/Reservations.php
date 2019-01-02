@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bundle\FrameworkBundle\Tests\Fixtures\Validation\Category;
 
 /**
  * Reservations
@@ -22,31 +23,29 @@ class Reservations
     private $id;
 
     /**
-     * @ORM\Column(type="datetime", name="reservation")
+     * @ORM\Column(type="date", name="reservation_date")
      */
-    private $reservation_date_time;
+    private $reservation_date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Users", inversedBy="reservations_join")
+     * @ORM\Column(type="time", name="reservation_time")
      */
-    private $Users_Join;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Menu", mappedBy="reservation_join")
-     */
-    private $Menu_Join;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Plates", mappedBy="reservations_join")
-     */
-    private $Plates_join;
-
-
+    private $reservation_time;
 
 
     /**
-     * Get id
-     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="reservations")
+     */
+    private $user;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Menu", cascade={"persist"})
+     */
+    private $menu;
+
+
+    /**
      * @return int
      */
     public function getId()
@@ -57,71 +56,77 @@ class Reservations
     /**
      * @return mixed
      */
-    public function getReservationDateTime()
+    public function getReservationDate()
     {
-        return $this->reservation_date_time;
+        return $this->reservation_date;
     }
 
     /**
-     * @param mixed $reservation_date_time
+     * @param mixed $reservation_date
      */
-    public function setReservationDateTime($reservation_date_time)
+    public function setReservationDate($reservation_date)
     {
-        $this->reservation_date_time = $reservation_date_time;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUsersJoin()
-    {
-        return $this->Users_Join;
-    }
-
-    /**
-     * @param mixed $Users_Join
-     */
-    public function setUsersJoin($Users_Join)
-    {
-        $this->Users_Join = $Users_Join;
+        $this->reservation_date = $reservation_date;
     }
 
     /**
      * @return mixed
      */
-    public function getMenuJoin()
+    public function getReservationTime()
     {
-        return $this->Menu_Join;
+        return $this->reservation_time;
     }
 
     /**
-     * @param mixed $Menu_Join
+     * @param mixed $reservation_time
      */
-    public function setMenuJoin($Menu_Join)
+    public function setReservationTime($reservation_time)
     {
-        $this->Menu_Join = $Menu_Join;
+        $this->reservation_time = $reservation_time;
     }
 
     /**
      * @return mixed
      */
-    public function getPlatesJoin()
+    public function getUser()
     {
-        return $this->Plates_join;
+        return $this->user;
     }
 
     /**
-     * @param mixed $Plates_join
+     * @param mixed $user
      */
-    public function setPlatesJoin($Plates_join)
+    public function setUser($user)
     {
-        $this->Plates_join = $Plates_join;
+        $this->user = $user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMenu()
+    {
+        return $this->menu;
+    }
+
+    /**
+     * @param mixed $menu
+     */
+    public function setMenu($menu)
+    {
+        $this->menu = $menu;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserNonMembre()
+    {
+        return $this->user_non_membre;
     }
 
 
 
-
-/**/
 
 
 
